@@ -15,7 +15,7 @@ class Objective3 @Inject constructor(injector: HasAndroidInjector) : Objective(i
     @Inject lateinit var nsClientPlugin: NSClientPlugin
 
     init {
-        tasks.add(MinimumDurationTask(this, T.seconds(55).msecs()))
+        tasks.add(MinimumDurationTask(this, T.secs(55).msecs()))
         tasks.add(object : Task(this, R.string.objectives_manualenacts) {
             override fun isCompleted(): Boolean {
                 return sp.getInt(R.string.key_ObjectivesmanualEnacts, 0) >= MANUAL_ENACTS_NEEDED
