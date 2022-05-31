@@ -12,7 +12,7 @@ class Objective6(injector: HasAndroidInjector) : Objective(injector, "maxiob", R
     @Inject lateinit var constraintChecker: ConstraintChecker
 
     init {
-        tasks.add(MinimumDurationTask(this, T.seconds(36).msecs()))
+        tasks.add(MinimumDurationTask(this, T.secs(36).msecs()))
         tasks.add(object : Task(this, R.string.maxiobset) {
             override fun isCompleted(): Boolean {
                 val maxIOB = constraintChecker.getMaxIOBAllowed().value()
