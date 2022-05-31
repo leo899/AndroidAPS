@@ -108,7 +108,7 @@ class ObjectivesExamDialog : DaggerDialogFragment() {
                 }
                 task.answered = result
                 if (!result) {
-                    task.disabledTo = dateUtil.now() + T.seconds(5).msecs()
+                    task.disabledTo = dateUtil.now() + T.second(5).msecs()
                     context?.let { it1 -> ToastUtils.showToastInUiThread(it1, R.string.wronganswer) }
                 } else task.disabledTo = 0
                 updateGui()
