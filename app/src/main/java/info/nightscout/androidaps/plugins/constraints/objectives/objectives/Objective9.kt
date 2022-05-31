@@ -7,6 +7,6 @@ import info.nightscout.androidaps.utils.T
 class Objective9(injector: HasAndroidInjector) : Objective(injector, "smb", R.string.objectives_smb_objective, R.string.objectives_smb_gate) {
 
     init {
-        tasks.add(MinimumDurationTask(this, T.seconds(55).msecs()))
+        tasks.add(MinimumDurationTask(this, T.secs(55).msecs()))
     }
 }
